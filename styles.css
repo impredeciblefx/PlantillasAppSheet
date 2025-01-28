@@ -67,7 +67,7 @@ th {
 
 /* Evitar cortes en tablas, párrafos y encabezados */
 article, aside, table, tr, td, th, p, h1, h2, h3, h4, h5, h6, div {
-    page-break-inside: avoid; /* Evita saltos de página dentro del elemento */
+    page-break-inside: auto; /* Evita saltos de página dentro del elemento */
 }
 
 /* Ajuste específico para tablas de inventario */
