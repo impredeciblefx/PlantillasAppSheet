@@ -51,7 +51,7 @@ table, p, h1, h2, h3, h4, h5, h6, div, article, aside {
 table {
     width: 100%;
     margin: 0 0 1em;
-    font-size: 75%;
+    font-size: 10pt;
     table-layout: auto; /* Cambiado de fixed a auto */
     width: 100%;
     border-collapse: collapse; /* Añadido para evitar problemas de bordes en algunas situaciones */
@@ -66,6 +66,34 @@ th, td {
 
 th {
     background: #EEE;
+}
+
+    /* Asegurar que las tablas no se desborden */
+    table.inventory {
+        width: 100%;
+        table-layout: auto;
+    }
+
+    /* Evitar cortes en las filas de la tabla */
+    tr {
+        page-break-inside: avoid;
+    }
+
+    /* Ajustar el aside para impresión */
+    aside {
+        margin-top: 1.5em;
+        font-size: 0.9em;
+    }
+
+    aside h1 {
+        font-size: 1.2em;
+        margin-bottom: 0.5em;
+    }
+
+    /* Ocultar elementos innecesarios en impresión */
+    .add, .cut {
+        display: none;
+    }
 }
 
 /* Ajustar el ancho de las columnas en la tabla de inventario */
@@ -102,7 +130,7 @@ table.inventory td:nth-child(6) {
 /* page */
 @page {
     size: A4;
-    margin: 1in; /* Márgenes estándar para impresión */
+    margin: 0,5cm; /* Márgenes estándar para impresión */
 }
 
 html {
@@ -132,9 +160,10 @@ header, footer {
 /* Estilos mejorados para el header */
 header {
     margin: 0 0 3em;
+    margin-bottom: 1.5em;
     overflow: hidden;
     background: #f9f9f9; /* Fondo claro para resaltar el header */
-    padding: 1.5em;
+    padding: 1em;
     border-radius: 0.5em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
@@ -310,15 +339,30 @@ tr:hover .cut {
     opacity: 1;
 }
 
+/* Evitar que los elementos se corten en varias páginas */
+    article, aside, table, tr, td, th {
+        page-break-inside: avoid; /* Evitar cortes dentro de estos elementos */
+    }
+
 @media print {
+        /* Resetear márgenes y padding */
     * {
         -webkit-print-color-adjust: exact;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
     html {
         background: none;
         padding: 0;
     }
     body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        font-size: 12pt; /* Tamaño de fuente adecuado para impresión */
         box-shadow: none;
         margin: 0;
     }
