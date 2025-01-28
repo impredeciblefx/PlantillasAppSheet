@@ -63,7 +63,7 @@ th {
 /* Ajustar el ancho de las columnas en la tabla de inventario */
 table.inventory th:nth-child(1),
 table.inventory td:nth-child(1) {
-    width: 5%; /* Ancho para la columna "Id" */
+    width: 10%; /* Ancho para la columna "Id" */
 }
 
 table.inventory th:nth-child(2),
@@ -73,7 +73,7 @@ table.inventory td:nth-child(2) {
 
 table.inventory th:nth-child(3),
 table.inventory td:nth-child(3) {
-    width: 15%; /* Ancho para la columna "Precio Unitario" */
+    width: 10%; /* Ancho para la columna "Precio Unitario" */
 }
 
 table.inventory th:nth-child(4),
