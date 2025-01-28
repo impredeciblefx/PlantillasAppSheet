@@ -129,7 +129,7 @@ table.inventory td:nth-child(6) {
 @media print {
     * {
         -webkit-print-color-adjust: exact; /* Ajusta colores para impresión */
-        margin: 0; /* Elimina márgenes */
+        margin: 1cm; /* Elimina márgenes */
         padding: 0; /* Elimina padding */
         box-sizing: border-box; /* Ajuste de tamaño del cuadro */
     }
@@ -164,7 +164,7 @@ table.inventory td:nth-child(6) {
 html {
     font: 16px/1 'Open Sans', sans-serif; /* Fuente base */
     overflow: auto; /* Desbordamiento automático */
-    padding: 0.5in; /* Padding interno */
+    padding: 0.5cm; /* Padding interno */
     background: #999; /* Fondo gris oscuro */
     cursor: default; /* Cursor por defecto */
 }
@@ -174,7 +174,7 @@ body {
     width: 210mm; /* Ancho A4 */
     height: 297mm; /* Alto A4 */
     margin: 0 auto; /* Centrar contenido */
-    padding: 1in; /* Márgenes internos */
+    padding: 1cm; /* Márgenes internos */
     box-shadow: none; /* Sin sombra */
     overflow: hidden; /* Evita desbordamientos */
     background: #FFF; /* Fondo blanco */
