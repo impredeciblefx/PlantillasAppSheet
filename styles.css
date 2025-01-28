@@ -76,7 +76,7 @@ table.inventory td:nth-child(1) {
 
 table.inventory th:nth-child(2),
 table.inventory td:nth-child(2) {
-    width: 45%; /* Ancho para la columna "Descripción" */
+    width: 40%; /* Ancho para la columna "Descripción" */
 }
 
 table.inventory th:nth-child(3),
