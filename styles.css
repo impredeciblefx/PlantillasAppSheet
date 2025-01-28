@@ -1,392 +1,228 @@
-/* reset */
+/* Reset de estilos básicos */
 * {
-    box-sizing: content-box;
-    color: inherit;
-    font: inherit;
-    line-height: inherit;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    vertical-align: top;
+    box-sizing: content-box; /* Ajusta el tamaño del cuadro según el contenido */
+    color: inherit; /* Hereda el color del texto */
+    font: inherit; /* Hereda el tipo de fuente */
+    line-height: inherit; /* Hereda el interlineado */
+    list-style: none; /* Quita estilos de lista */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina padding por defecto */
+    text-decoration: none; /* Elimina decoraciones de texto */
+    vertical-align: top; /* Alinea verticalmente al tope */
 }
 
-/* content editable */
+/* Estilos para elementos editables */
 *[contenteditable] {
-    border-radius: 0.25em;
-    min-width: 1em;
-    outline: 0;
-    cursor: pointer;
+    border-radius: 0.25em; /* Bordes redondeados */
+    min-width: 1em; /* Mínimo ancho editable */
+    outline: 0; /* Quita el contorno */
+    cursor: pointer; /* Muestra cursor de puntero */
 }
 
+/* Hover y enfoque en elementos editables */
 *[contenteditable]:hover,
 *[contenteditable]:focus,
 td:hover *[contenteditable],
 td:focus *[contenteditable],
 img.hover {
-    background: #DEF;
-    box-shadow: 0 0 1em 0.5em #DEF;
+    background: #DEF; /* Fondo azul claro */
+    box-shadow: 0 0 1em 0.5em #DEF; /* Sombra azul clara */
 }
 
+/* Estilo para spans editables */
 span[contenteditable] {
-    display: inline-block;
+    display: inline-block; /* Mostrar en línea */
 }
 
-/* heading */
+/* Estilo para encabezados */
 h1 {
-    font: bold 100% sans-serif;
-    letter-spacing: 0.5em;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 1em; /* Añadido para espacio después del título */
+    font: bold 100% sans-serif; /* Texto en negrita y sans-serif */
+    letter-spacing: 0.5em; /* Espaciado entre letras */
+    text-align: center; /* Centrar texto */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    margin-bottom: 1em; /* Margen inferior */
 }
 
-/* table */
-
-/* Evitar cortes en tablas y otros elementos */
-table, p, h1, h2, h3, h4, h5, h6, div, article, aside {
-    page-break-inside: avoid;
-}
-
+/* Estilo para tablas */
 table {
-    width: 100%;
-    margin: 0 0 1em;
-    font-size: 10pt;
-    table-layout: auto; /* Cambiado de fixed a auto */
-    width: 100%;
-    border-collapse: collapse; /* Añadido para evitar problemas de bordes en algunas situaciones */
+    width: 100%; /* Ancho completo */
+    margin: 0 0 1em; /* Margen inferior */
+    font-size: 10pt; /* Tamaño de fuente */
+    table-layout: auto; /* Ajuste automático del ancho de columnas */
+    border-collapse: collapse; /* Elimina espacios entre bordes */
 }
 
+/* Bordes y relleno en celdas de tablas */
 th, td {
-    border: 1px solid #000; /* Añadido un borde sólido para todas las celdas */
-    padding: 0.5em;
-    position: relative;
-    text-align: left;
+    border: 1px solid #000; /* Bordes sólidos */
+    padding: 0.5em; /* Espaciado interno */
+    position: relative; /* Posicionamiento relativo */
+    text-align: left; /* Alineación izquierda */
 }
 
+/* Estilo de encabezados de tablas */
 th {
-    background: #EEE;
+    background: #EEE; /* Fondo gris claro */
 }
 
-    /* Asegurar que las tablas no se desborden */
-    table.inventory {
-        width: 100%;
-        table-layout: auto;
-    }
-
-    /* Evitar cortes en las filas de la tabla */
-    tr {
-        page-break-inside: avoid;
-    }
-
-    /* Ajustar el aside para impresión */
-    aside {
-        margin-top: 1.5em;
-        font-size: 0.9em;
-    }
-
-    aside h1 {
-        font-size: 1.2em;
-        margin-bottom: 0.5em;
-    }
-
-    /* Ocultar elementos innecesarios en impresión */
-    .add, .cut {
-        display: none;
-    }
+/* Evitar cortes en tablas, párrafos y encabezados */
+article, aside, table, tr, td, th, p, h1, h2 {
+    page-break-inside: avoid; /* Evita saltos de página dentro del elemento */
 }
 
-/* Ajustar el ancho de las columnas en la tabla de inventario */
+/* Ajuste específico para tablas de inventario */
+table.inventory {
+    table-layout: auto; /* Ajuste automático del ancho de columnas */
+    width: 100%; /* Ancho completo */
+    page-break-inside: auto;
+}
+
+/* Evitar cortes en filas de tablas */
+tr {
+    page-break-inside: avoid; /* Evita cortes dentro de las filas */
+}
+
+/* Estilo para aside */
+aside {
+    margin-top: 1.5em; /* Margen superior */
+    font-size: 0.9em; /* Tamaño de fuente menor */
+}
+
+/* Encabezados en aside */
+aside h1 {
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+    margin-bottom: 0.5em; /* Margen inferior */
+}
+
+/* Ocultar elementos no necesarios en impresión */
+.add, .cut {
+    display: none; /* Ocultar elementos */
+}
+
+/* Ancho de columnas específicas en tablas de inventario */
 table.inventory th:nth-child(1),
 table.inventory td:nth-child(1) {
-    width: 10%; /* Ancho para la columna "Id" */
+    width: 10%; /* Columna "Id" */
 }
-
 table.inventory th:nth-child(2),
 table.inventory td:nth-child(2) {
-    width: 40%; /* Ancho para la columna "Descripción" */
+    width: 40%; /* Columna "Descripción" */
 }
-
 table.inventory th:nth-child(3),
 table.inventory td:nth-child(3) {
-    width: 10%; /* Ancho para la columna "Precio Unitario" */
+    width: 10%; /* Columna "Precio Unitario" */
 }
-
 table.inventory th:nth-child(4),
 table.inventory td:nth-child(4) {
-    width: 10%; /* Ancho para la columna "Cantidad" */
+    width: 10%; /* Columna "Cantidad" */
 }
-
 table.inventory th:nth-child(5),
 table.inventory td:nth-child(5) {
-    width: 10%; /* Ancho para la columna "Descuento %" */
+    width: 10%; /* Columna "Descuento %" */
 }
-
 table.inventory th:nth-child(6),
 table.inventory td:nth-child(6) {
-    width: 15%; /* Ancho para la columna "Subtotal" */
+    width: 15%; /* Columna "Subtotal" */
 }
 
-/* page */
+/* Estilos para impresión */
+@media print {
+    * {
+        -webkit-print-color-adjust: exact; /* Ajusta colores para impresión */
+        margin: 0; /* Elimina márgenes */
+        padding: 0; /* Elimina padding */
+        box-sizing: border-box; /* Ajuste de tamaño del cuadro */
+    }
+    html {
+        background: none; /* Elimina fondo */
+        padding: 0; /* Sin padding */
+    }
+    body {
+        width: 100%; /* Ancho completo */
+        height: 100%; /* Alto completo */
+        margin: 0; /* Sin márgenes */
+        padding: 0; /* Sin padding */
+        background: #fff; /* Fondo blanco */
+        font-size: 12pt; /* Tamaño de fuente adecuado */
+        box-shadow: none; /* Sin sombras */
+    }
+    span:empty {
+        display: none; /* Ocultar spans vacíos */
+    }
+    .add, .cut {
+        display: none; /* Ocultar elementos de adición/corte */
+    }
+}
+
+/* Ajustes para página */
 @page {
-    size: A4;
+    size: A4; /* Tamaño de página A4 */
     margin: 1cm; /* Márgenes estándar para impresión */
 }
 
+/* Ajustes generales para el HTML */
 html {
-    font: 16px/1 'Open Sans', sans-serif;
-    overflow: auto;
-    padding: 0.5in;
-    background: #999;
-    cursor: default;
+    font: 16px/1 'Open Sans', sans-serif; /* Fuente base */
+    overflow: auto; /* Desbordamiento automático */
+    padding: 0.5in; /* Padding interno */
+    background: #999; /* Fondo gris oscuro */
+    cursor: default; /* Cursor por defecto */
 }
 
+/* Ajustes generales para el body */
 body {
-    width: 210mm; /* Ancho de A4 */
-    height: 297mm; /* Alto de A4 */
-    margin: 0 auto;
+    width: 210mm; /* Ancho A4 */
+    height: 297mm; /* Alto A4 */
+    margin: 0 auto; /* Centrar contenido */
     padding: 1in; /* Márgenes internos */
-    box-shadow: none;
+    box-shadow: none; /* Sin sombra */
     overflow: hidden; /* Evita desbordamientos */
-    background: #FFF;
-    box-sizing: border-box;
+    background: #FFF; /* Fondo blanco */
+    box-sizing: border-box; /* Ajuste de tamaño */
 }
 
-/* header */
+/* Estilos para encabezado y pie de página */
 header, footer {
-    page-break-after: avoid;
-    page-break-before: avoid;
+    page-break-after: avoid; /* Evita saltos después */
+    page-break-before: avoid; /* Evita saltos antes */
 }
-/* Estilos mejorados para el header */
+
+/* Estilos para encabezado */
 header {
-    margin: 0 0 3em;
-    margin-bottom: 1.5em;
-    overflow: hidden;
-    background: #f9f9f9; /* Fondo claro para resaltar el header */
-    padding: 1em;
-    border-radius: 0.5em;
+    margin: 0 0 3em; /* Margen inferior */
+    background: #f9f9f9; /* Fondo claro */
+    padding: 1em; /* Padding interno */
+    border-radius: 0.5em; /* Bordes redondeados */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 header h1 {
-    background: #27649d;
-    border-radius: 0.25em;
-    color: #FFF;
-    margin: 0 0 1em 0; /* Espacio inferior */
-    padding: 0.75em 1em;
-    font-size: 1.5em;
-    text-align: left; /* Alineación a la izquierda */
-    letter-spacing: 0.05em; /* Reducir el espaciado entre letras */
+    background: #27649d; /* Fondo azul */
+    border-radius: 0.25em; /* Bordes redondeados */
+    color: #FFF; /* Texto blanco */
+    margin: 0 0 1em; /* Margen inferior */
+    padding: 0.75em 1em; /* Padding interno */
+    font-size: 1.5em; /* Tamaño de fuente */
+    text-align: left; /* Alineación izquierda */
+    letter-spacing: 0.05em; /* Espaciado entre letras */
 }
 
 header address {
-    float: left;
-    font-size: 0.9em;
-    font-style: normal;
-    line-height: 1.6;
-    margin: 0;
-    color: #555; /* Color de texto más suave */
-}
-
-header address p {
-    margin: 0.5em 0; /* Espaciado entre líneas */
-}
-
-header .logo-container {
-    float: right;
-    text-align: right;
+    float: left; /* Alineación izquierda */
+    font-size: 0.9em; /* Tamaño de fuente */
+    line-height: 1.6; /* Interlineado */
+    color: #555; /* Color gris */
 }
 
 header img {
-    width: 100px;
-    height: 100px;
-    border-radius: 0.5em; /* Bordes redondeados para el logo */
-    border: 2px solid #27649d; /* Borde que combina con el h1 */
+    width: 100px; /* Ancho fijo */
+    height: 100px; /* Alto fijo */
+    border-radius: 0.5em; /* Bordes redondeados */
+    border: 2px solid #27649d; /* Borde azul */
 }
 
-/* Estilo para los datos de contacto */
-header .contact-info {
-    margin-top: 1em;
-    font-size: 0.85em;
-    color: #777;
-}
-
-header .contact-info p {
-    margin: 0.3em 0;
-}
-
-/* Limpiar floats */
-header:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* article */
-/* Evitar saltos para el contenido principal */
+/* Ajustes para el contenido principal */
 article {
-    page-break-before: auto;
-    page-break-after: auto;
-    page-break-inside: avoid;
-}
-article,
-article address,
-table.meta,
-table.inventory {
-    margin: 0 0 3em;
-    clear: both;
-}
-
-article:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-article h1 {
-    clip: rect(0 0 0 0);
-    position: absolute;
-}
-
-article address {
-    float: left;
-    font-size: 125%;
-    font-weight: bold;
-}
-
-/* table meta & balance */
-table.meta,
-table.balance {
-    float: right;
-    width: 36%;
-}
-
-table.meta:after,
-table.balance:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* table meta */
-table.meta th {
-    width: 40%;
-}
-
-table.meta td {
-    width: 60%;
-}
-
-/* table items */
-table.inventory th {
-    font-weight: bold;
-    text-align: center;
-}
-
-table.inventory td {
-    text-align: center;
-}
-
-table { font-size: 75%; table-layout: auto; width: 100%; } /* Cambiado a auto */
-table { border-collapse: separate; border-spacing: 2px; }
-th, td { border-width: 1px; padding: 0.5em; position: relative; text-align: left; }
-th, td { border-radius: 0.25em; border-style: solid; }
-th { background: #EEE; border-color: #BBB; }
-td { border-color: #DDD; }
-
-/* aside */
-aside h1 {
-    border: none;
-    border-width: 0 0 1px;
-    margin: 0 0 1em;
-    border-color: #999;
-    border-bottom-style: solid;
-}
-
-/* javascript */
-.add,
-.cut {
-    display: block;
-    float: left;
-    width: 0.6em;
-    font-size: .8rem;
-    padding: 0.25em 0.5em;
-    background: #9AF;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    background-image: -moz-linear-gradient(#00ADEE 5%, #0078A5 100%);
-    background-image: -webkit-linear-gradient(#00ADEE 5%, #0078A5 100%);
-    border-radius: 0.5em;
-    border-color: #0076A3;
-    color: #FFF;
-    cursor: pointer;
-    font-weight: bold;
-    text-shadow: 0 -1px 2px rgba(0,0,0,0.333);
-    margin: -2.5em 0 0;
-}
-
-.add:hover {
-    background: #00ADEE;
-}
-
-.cut {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: -1.5em;
-}
-
-tr:hover .cut {
-    opacity: 1;
-}
-
-/* Evitar que los elementos se corten en varias páginas */
-    article, aside, table, tr, td, th {
-        page-break-inside: avoid; /* Evitar cortes dentro de estos elementos */
-    }
-
-@media print {
-        /* Resetear márgenes y padding */
-    * {
-        -webkit-print-color-adjust: exact;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    html {
-        background: none;
-        padding: 0;
-    }
-    body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        background: #fff;
-        font-size: 12pt; /* Tamaño de fuente adecuado para impresión */
-        box-shadow: none;
-        margin: 0;
-    }
-    span:empty {
-        display: none;
-    }
-    .add,
-    .cut {
-        display: none;
-    }
-}
-
-@page {
-    margin: 0;
-}
-
-/* Agrega un estilo personalizado para la línea debajo de la dirección y el número */
-.custom-line {
-    border: none;
-    border-bottom: 1px solid #000;
-    margin: 5px 0;
-}
-
-/* Estilo para el texto más pequeño */
-.small-text {
-    font-size: 60%;
-}
+    page-break-before: auto; /* Evita saltos antes */
+    page-break-after: auto; /* Evita saltos después */
+    page-break-ins
