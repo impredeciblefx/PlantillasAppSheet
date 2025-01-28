@@ -130,7 +130,7 @@ table.inventory td:nth-child(6) {
 /* page */
 @page {
     size: A4;
-    margin: 0,5cm; /* Márgenes estándar para impresión */
+    margin: 1cm; /* Márgenes estándar para impresión */
 }
 
 html {
