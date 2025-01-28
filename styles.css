@@ -67,7 +67,7 @@ th {
 
 /* Evitar cortes en tablas, párrafos y encabezados */
 article, aside, table, tr, td, th, p, h1, h2, h3, h4, h5, h6, div {
-    page-break-inside: auto; /* Evita saltos de página dentro del elemento */
+    page-break-inside: avoid; /* Evita saltos de página dentro del elemento */
 }
 
 /* Ajuste específico para tablas de inventario */
@@ -78,7 +78,7 @@ table.inventory {
 
 /* Evitar cortes en filas de tablas */
 tr {
-    page-break-inside: avoid; /* Evita cortes dentro de las filas */
+    page-break-inside: auto; /* Evita cortes dentro de las filas */
 }
 
 /* Estilo para aside */
@@ -163,7 +163,7 @@ table.inventory td:nth-child(6) {
 html {
     font: 16px/1 'Open Sans', sans-serif; /* Fuente base */
     overflow: auto; /* Desbordamiento automático */
-    padding: 0.5in; /* Padding interno */
+    padding: 0.5cm; /* Padding interno */
     background: #999; /* Fondo gris oscuro */
     cursor: default; /* Cursor por defecto */
 }
@@ -173,7 +173,7 @@ body {
     width: 210mm; /* Ancho A4 */
     height: 297mm; /* Alto A4 */
     margin: 0 auto; /* Centrar contenido */
-    padding: 1in; /* Márgenes internos */
+    padding: 1cm; /* Márgenes internos */
     box-shadow: none; /* Sin sombra */
     overflow: hidden; /* Evita desbordamientos */
     background: #FFF; /* Fondo blanco */
