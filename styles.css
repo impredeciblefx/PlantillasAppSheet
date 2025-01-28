@@ -66,7 +66,7 @@ th {
 }
 
 /* Evitar cortes en tablas, párrafos y encabezados */
-article, aside {
+article, aside, table, tr, td, th, p, h1, h2, h3, h4, h5, h6, div {
     page-break-inside: avoid; /* Evita saltos de página dentro del elemento */
 }
 
@@ -74,7 +74,6 @@ article, aside {
 table.inventory {
     table-layout: auto; /* Ajuste automático del ancho de columnas */
     width: 100%; /* Ancho completo */
-    page-break-inside: auto;
 }
 
 /* Evitar cortes en filas de tablas */
@@ -129,7 +128,7 @@ table.inventory td:nth-child(6) {
 @media print {
     * {
         -webkit-print-color-adjust: exact; /* Ajusta colores para impresión */
-        margin: 1cm; /* Elimina márgenes */
+        margin: 0; /* Elimina márgenes */
         padding: 0; /* Elimina padding */
         box-sizing: border-box; /* Ajuste de tamaño del cuadro */
     }
@@ -164,7 +163,7 @@ table.inventory td:nth-child(6) {
 html {
     font: 16px/1 'Open Sans', sans-serif; /* Fuente base */
     overflow: auto; /* Desbordamiento automático */
-    padding: 0.5cm; /* Padding interno */
+    padding: 0.5in; /* Padding interno */
     background: #999; /* Fondo gris oscuro */
     cursor: default; /* Cursor por defecto */
 }
@@ -174,7 +173,7 @@ body {
     width: 210mm; /* Ancho A4 */
     height: 297mm; /* Alto A4 */
     margin: 0 auto; /* Centrar contenido */
-    padding: 1cm; /* Márgenes internos */
+    padding: 1in; /* Márgenes internos */
     box-shadow: none; /* Sin sombra */
     overflow: hidden; /* Evita desbordamientos */
     background: #FFF; /* Fondo blanco */
@@ -182,6 +181,10 @@ body {
 }
 
 /* Estilos para encabezado y pie de página */
+header, footer {
+    page-break-after: avoid; /* Evita saltos después */
+    page-break-before: avoid; /* Evita saltos antes */
+}
 
 /* Estilos para encabezado */
 header {
