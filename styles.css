@@ -38,7 +38,7 @@ h1 {
     letter-spacing: 0.5em;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 1em;
+    margin-bottom: 1em; /* Añadido para espacio después del título */
 }
 
 /* table */
@@ -46,11 +46,11 @@ table {
     font-size: 75%;
     table-layout: fixed;
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; /* Añadido para evitar problemas de bordes en algunas situaciones */
 }
 
 th, td {
-    border: 1px solid #000;
+    border: 1px solid #000; /* Añadido un borde sólido para todas las celdas */
     padding: 0.5em;
     position: relative;
     text-align: left;
@@ -80,7 +80,7 @@ body {
 /* header */
 header {
     margin: 0 0 3em;
-    overflow: hidden;
+    overflow: hidden; /* Añadido para manejar el colapso del margen superior */
 }
 
 header h1 {
@@ -112,6 +112,17 @@ header img {
 header img {
     max-height: 100%;
     max-width: 100%;
+}
+
+header input {
+    cursor: pointer;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 /* article */
@@ -172,6 +183,13 @@ table.inventory th {
 table.inventory td {
     text-align: right;
 }
+
+table { font-size: 75%; table-layout: fixed; width: 100%; }
+table { border-collapse: separate; border-spacing: 2px; }
+th, td { border-width: 1px; padding: 0.5em; position: relative; text-align: left; }
+th, td { border-radius: 0.25em; border-style: solid; }
+th { background: #EEE; border-color: #BBB; }
+td { border-color: #DDD; }
 
 /* aside */
 aside h1 {
@@ -241,6 +259,13 @@ tr:hover .cut {
 
 @page {
     margin: 0;
+}
+
+/* Agrega un estilo personalizado para la línea debajo de la dirección y el número */
+.custom-line {
+    border: none;
+    border-bottom: 1px solid #000;
+    margin: 5px 0;
 }
 
 /* Estilo para el texto más pequeño */
