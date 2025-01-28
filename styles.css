@@ -66,7 +66,7 @@ th {
 }
 
 /* Evitar cortes en tablas, párrafos y encabezados */
-article, aside, table, tr, td, th, p, h1, h2 {
+article, aside {
     page-break-inside: avoid; /* Evita saltos de página dentro del elemento */
 }
 
@@ -182,10 +182,6 @@ body {
 }
 
 /* Estilos para encabezado y pie de página */
-header, footer {
-    page-break-after: avoid; /* Evita saltos después */
-    page-break-before: avoid; /* Evita saltos antes */
-}
 
 /* Estilos para encabezado */
 header {
