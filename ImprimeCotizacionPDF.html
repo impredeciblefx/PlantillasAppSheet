@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>COTIZACIÓN</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="license" href="https://www.opensource.org/licenses/mit-license/">
+</head>
+<body>
+    <header>
+        <h1>COTIZACIÓN</h1>
+        <address>
+            <p>{{NombreEmpresa}}</p>
+        </address>
+        <div style="float: right;">
+            <img alt="Logo" src="{{LogoEmpresa}}" style="width: 100px; height: 100px;">
+        </div>
+    </header>
+
+    <article>
+        <h1>Cliente</h1>
+        <address>
+            <p>{{Cliente.NombreCliente}}</p>
+            <p class="small-text">Email: {{Cliente.Correo}}</p>
+            <p class="small-text">Cel: {{Cliente.Telefono}}</p>
+        </address>
+        <table class="meta">
+            <tr>
+                <th><span>Cotización #</span></th>
+                <td><span>{{Id}}</span></td>
+            </tr>
+            <tr>
+                <th><span>Fecha</span></th>
+                <td><span>{{FechaCotizacion}}</span></td>
+            </tr>
+            <tr>
+                <th><span>Vencimiento</span></th>
+                <td><span>{{FechaVencimiento}}</span></td>
+            </tr>
+        </table>
+        <table class="inventory">
+            <thead>
+                <tr>
+                    <th><span>Producto</span></th>
+                    <th><span>Descripción</span></th>
+                    <th><span>Valor unitario</span></th>
+                    <th><span>Cantidad</span></th>
+                    <th><span>Subtotal</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#Related DetallesCotizacions}}
+                <tr>
+                    <td>{{Articulo.Descripcion}}</td>
+                    <td>{{Articulo.Detalles}}</td>
+                    <td>{{Precio}}</td>
+                    <td>{{Cantidad}}</td>
+                    <td>{{Sub Total}}</td>
+                </tr>
+                {{/Related DetallesCotizacions}}
+            </tbody>
+        </table>
+        <table class="balance">
+            <tr>
+                <th><span>Sub Total</span></th>
+                <td><span>{{SubTotal}}</span></td>
+            </tr>
+            <tr>
+                <th><span>IGV 18%</span></th>
+                <td><span>{{IGV}}</span></td>
+            </tr>
+            <tr>
+                <th><span>Descuentos</span></th>
+                <td><span>{{Descuentos}}</span></td>
+            </tr>
+            <tr>
+                <th><span>Total a Pagar</span></th>
+                <td><span>{{Total a Pagar}}</span></td>
+            </tr>
+        </table>
+    </article>
+
+    <aside>
+        <h1><span>Notas adicionales</span></h1>
+        <div>
+            <p>{{TerminosCondiciones}}</p>
+        </div>
+    </aside>
+</body>
+</html>
