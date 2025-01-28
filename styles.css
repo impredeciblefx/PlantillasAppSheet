@@ -60,6 +60,37 @@ th {
     background: #EEE;
 }
 
+/* Ajustar el ancho de las columnas en la tabla de inventario */
+table.inventory th:nth-child(1),
+table.inventory td:nth-child(1) {
+    width: 10%; /* Ancho para la columna "Id" */
+}
+
+table.inventory th:nth-child(2),
+table.inventory td:nth-child(2) {
+    width: 40%; /* Ancho para la columna "Descripción" */
+}
+
+table.inventory th:nth-child(3),
+table.inventory td:nth-child(3) {
+    width: 15%; /* Ancho para la columna "Precio Unitario" */
+}
+
+table.inventory th:nth-child(4),
+table.inventory td:nth-child(4) {
+    width: 10%; /* Ancho para la columna "Cantidad" */
+}
+
+table.inventory th:nth-child(5),
+table.inventory td:nth-child(5) {
+    width: 10%; /* Ancho para la columna "Descuento %" */
+}
+
+table.inventory th:nth-child(6),
+table.inventory td:nth-child(6) {
+    width: 15%; /* Ancho para la columna "Subtotal" */
+}
+
 /* page */
 html {
     font: 16px/1 'Open Sans', sans-serif;
@@ -181,7 +212,7 @@ table.inventory th {
 }
 
 table.inventory td {
-    text-align: right;
+    text-align: center;
 }
 
 table { font-size: 75%; table-layout: fixed; width: 100%; }
