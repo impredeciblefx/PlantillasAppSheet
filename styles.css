@@ -42,7 +42,15 @@ h1 {
 }
 
 /* table */
+
+/* Evitar cortes en tablas y otros elementos */
+table, p, h1, h2, h3, h4, h5, h6, div, article, aside {
+    page-break-inside: avoid;
+}
+
 table {
+    width: 100%;
+    margin: 0 0 1em;
     font-size: 75%;
     table-layout: auto; /* Cambiado de fixed a auto */
     width: 100%;
@@ -92,6 +100,11 @@ table.inventory td:nth-child(6) {
 }
 
 /* page */
+@page {
+    size: A4;
+    margin: 1in; /* Márgenes estándar para impresión */
+}
+
 html {
     font: 16px/1 'Open Sans', sans-serif;
     overflow: auto;
@@ -101,14 +114,21 @@ html {
 }
 
 body {
-    box-sizing: border-box;
+    width: 210mm; /* Ancho de A4 */
+    height: 297mm; /* Alto de A4 */
     margin: 0 auto;
-    padding: 0.5in;
+    padding: 1in; /* Márgenes internos */
+    box-shadow: none;
+    overflow: hidden; /* Evita desbordamientos */
     background: #FFF;
-    box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
 }
 
 /* header */
+header, footer {
+    page-break-after: avoid;
+    page-break-before: avoid;
+}
 /* Estilos mejorados para el header */
 header {
     margin: 0 0 3em;
@@ -174,6 +194,12 @@ header:after {
 }
 
 /* article */
+/* Evitar saltos para el contenido principal */
+article {
+    page-break-before: auto;
+    page-break-after: auto;
+    page-break-inside: avoid;
+}
 article,
 article address,
 table.meta,
