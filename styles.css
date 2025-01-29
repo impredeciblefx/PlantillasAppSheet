@@ -124,18 +124,12 @@ header h1 {
 
 header address {
     float: left;
-    font-size: 75%;
-    font-style: normal;
-    line-height: 1.25;
-    margin: 0 1em 1em 0;
-}
-header address p {
-    float: left;
     font-size: 100%;
-    font-style: normal;
+    font-style: Bold;
     line-height: 1.25;
     margin: 0 1em 1em 0;
 }
+
 header span,
 header img {
     display: block;
