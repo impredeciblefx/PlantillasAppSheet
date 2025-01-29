@@ -311,7 +311,10 @@ tr:hover .cut {
     border-bottom: 1px solid #000;
     margin: 5px 0;
 }
-
+/* Estilo para el texto más grande */
+.high-text {
+    font-size: 150%;
+}
 /* Estilo para el texto más pequeño */
 .small-text {
     font-size: 75%;
