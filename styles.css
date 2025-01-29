@@ -178,7 +178,7 @@ article h1 {
 
 article address {
     float: left;
-    font-size: 150%;
+    font-size: 130%;
     font-weight: bold;
 }
 
@@ -192,7 +192,6 @@ table.terminos {
     float: left;
     width: 64%;
 }
-table.meta:after,
 table.balance:after {
     content: "";
     display: table;
@@ -304,5 +303,5 @@ tr:hover .cut {
 
 /* Estilo para el texto más pequeño */
 .small-text {
-    font-size: 80%;
+    font-size: 75%;
 }
