@@ -195,6 +195,10 @@ table.balance {
     float: right;
     width: 36%;
 }
+table.datosadicionales {
+    float: left;
+    width: 45%;
+}
 table.terminos {
     float: left;
     width: 64%;
