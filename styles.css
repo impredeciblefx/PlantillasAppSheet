@@ -78,7 +78,7 @@ table.inventory {
 
 /* Evitar cortes en filas de tablas */
 tr {
-    page-break-inside: auto; /* Evita cortes dentro de las filas */
+    page-break-inside: avoid; /* Evita cortes dentro de las filas */
 }
 
 /* Estilo para aside */
@@ -98,33 +98,7 @@ aside h1 {
     display: none; /* Ocultar elementos */
 }
 
-/* Ancho de columnas específicas en tablas de inventario */
-table.inventory th:nth-child(1),
-table.inventory td:nth-child(1) {
-    width: 10%; /* Columna "Id" */
-}
-table.inventory th:nth-child(2),
-table.inventory td:nth-child(2) {
-    width: 40%; /* Columna "Descripción" */
-}
-table.inventory th:nth-child(3),
-table.inventory td:nth-child(3) {
-    width: 10%; /* Columna "Precio Unitario" */
-}
-table.inventory th:nth-child(4),
-table.inventory td:nth-child(4) {
-    width: 10%; /* Columna "Cantidad" */
-}
-table.inventory th:nth-child(5),
-table.inventory td:nth-child(5) {
-    width: 10%; /* Columna "Descuento %" */
-}
-table.inventory th:nth-child(6),
-table.inventory td:nth-child(6) {
-    width: 15%; /* Columna "Subtotal" */
-}
-
-/* Estilos para impresión */
+/* Ajustes para impresión */
 @media print {
     * {
         -webkit-print-color-adjust: exact; /* Ajusta colores para impresión */
@@ -163,7 +137,7 @@ table.inventory td:nth-child(6) {
 html {
     font: 16px/1 'Open Sans', sans-serif; /* Fuente base */
     overflow: auto; /* Desbordamiento automático */
-    padding: 0.5cm; /* Padding interno */
+    padding: 0.5in; /* Padding interno */
     background: #999; /* Fondo gris oscuro */
     cursor: default; /* Cursor por defecto */
 }
@@ -173,7 +147,7 @@ body {
     width: 210mm; /* Ancho A4 */
     height: 297mm; /* Alto A4 */
     margin: 0 auto; /* Centrar contenido */
-    padding: 1cm; /* Márgenes internos */
+    padding: 1in; /* Márgenes internos */
     box-shadow: none; /* Sin sombra */
     overflow: hidden; /* Evita desbordamientos */
     background: #FFF; /* Fondo blanco */
@@ -185,43 +159,3 @@ header, footer {
     page-break-after: avoid; /* Evita saltos después */
     page-break-before: avoid; /* Evita saltos antes */
 }
-
-/* Estilos para encabezado */
-header {
-    margin: 0 0 3em; /* Margen inferior */
-    background: #f9f9f9; /* Fondo claro */
-    padding: 1em; /* Padding interno */
-    border-radius: 0.5em; /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-header h1 {
-    background: #27649d; /* Fondo azul */
-    border-radius: 0.25em; /* Bordes redondeados */
-    color: #FFF; /* Texto blanco */
-    margin: 0 0 1em; /* Margen inferior */
-    padding: 0.75em 1em; /* Padding interno */
-    font-size: 1.5em; /* Tamaño de fuente */
-    text-align: left; /* Alineación izquierda */
-    letter-spacing: 0.05em; /* Espaciado entre letras */
-}
-
-header address {
-    float: left; /* Alineación izquierda */
-    font-size: 0.9em; /* Tamaño de fuente */
-    line-height: 1.6; /* Interlineado */
-    color: #555; /* Color gris */
-}
-
-header img {
-    width: 100px; /* Ancho fijo */
-    height: 100px; /* Alto fijo */
-    border-radius: 0.5em; /* Bordes redondeados */
-    border: 2px solid #27649d; /* Borde azul */
-}
-
-/* Ajustes para el contenido principal */
-article {
-    page-break-before: auto; /* Evita saltos antes */
-    page-break-after: auto; /* Evita saltos después */
-    page-break-ins
