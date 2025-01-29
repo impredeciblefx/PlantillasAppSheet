@@ -184,6 +184,10 @@ article address {
 }
 
 /* table meta & balance */
+table.cliente {
+    float: left;
+    width: 64%;
+}
 table.meta,
 table.balance {
     float: right;
