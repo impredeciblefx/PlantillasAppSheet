@@ -197,11 +197,11 @@ table.balance {
 }
 table.datosadicionales {
     float: left;
-    width: 45%;
+    width: 36%;
 }
 table.terminos {
     float: left;
-    width: 64%;
+    width: 100%;
 }
 table.balance:after {
     content: "";
