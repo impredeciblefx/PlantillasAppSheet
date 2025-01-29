@@ -188,14 +188,21 @@ table.balance {
     float: right;
     width: 36%;
 }
-
+table.terminos {
+    float: left;
+    width: 60%;
+}
 table.meta:after,
 table.balance:after {
     content: "";
     display: table;
     clear: both;
 }
-
+table.terminos:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 /* table meta */
 table.meta th {
     width: 40%;
