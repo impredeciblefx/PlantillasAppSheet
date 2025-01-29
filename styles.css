@@ -186,6 +186,8 @@ article address {
 /* table meta & balance */
 table.cliente {
     float: left;
+    font-size: 130%;
+    font-weight: bold;
     width: 64%;
 }
 table.meta,
