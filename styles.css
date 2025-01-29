@@ -178,7 +178,7 @@ article h1 {
 
 article address {
     float: left;
-    font-size: 125%;
+    font-size: 150%;
     font-weight: bold;
 }
 
@@ -304,5 +304,5 @@ tr:hover .cut {
 
 /* Estilo para el texto más pequeño */
 .small-text {
-    font-size: 60%;
+    font-size: 80%;
 }
