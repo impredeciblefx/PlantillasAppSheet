@@ -198,11 +198,7 @@ table.balance:after {
     display: table;
     clear: both;
 }
-table.terminos:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+
 /* table meta */
 table.meta th {
     width: 40%;
