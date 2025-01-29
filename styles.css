@@ -201,7 +201,7 @@ table.datosadicionales {
 }
 table.terminos {
     float: left;
-    width: 100%;
+
 }
 table.balance:after {
     content: "";
